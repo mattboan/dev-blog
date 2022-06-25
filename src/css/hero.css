@@ -1,0 +1,16 @@
+.hero-con {
+    background-color: #222;
+    
+    height: 450px;
+}
+
+.hero-con p {
+    margin: 0px;
+    padding: 15px;
+}
+
+
+.hero-img-temp {
+    backgroun-position: center;
+}
+
