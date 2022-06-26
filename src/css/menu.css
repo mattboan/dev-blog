@@ -10,5 +10,18 @@
     padding: 15px;
     background-color: rgba(21, 21, 21, 0.96);
     backdrop-filter: blur(10px);
+}
 
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-header .menu-btn {
+    margin-right: 20px;
+}
+
+.menu-header h1 {
+    margin: 0px;
 }

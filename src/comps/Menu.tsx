@@ -11,10 +11,14 @@ export interface Props {
  */
 export const Menu = (props: Props) => {
     return <div className="menu-con">
+        <div className="menu-header">
+        <h1>Menu</h1>
+
          <button className="menu-btn" onClick={() => props.open()}>
             <FontAwesomeIcon icon={faTimes} />
         </button>
-        <h1>Menu</h1>
+        </div>
+
         <p>Home</p>
     </div>
 }
