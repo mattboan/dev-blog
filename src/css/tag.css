@@ -1,12 +1,16 @@
 .multi-tag-con {
     display: flex;
     justify-content: flex-end;
+    padding-top: 15px;
+    padding-left: 15px;
+    width: 33%;
 }
 
 .tag-con {
     border: 2px solid #fff;
     padding: 5px;
     border-radius: 5px;
+    height: 19px;
 }
 
 .tag-text {
