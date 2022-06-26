@@ -1,5 +1,12 @@
 {
     "posts": [
-        { "id": "1", "title": "5110 LCD Display", "featured": "2022-06-26T05:01:57.248Z" }
+        {
+            "id": "1",
+            "title": "5110 LCD Display",
+            "featured": "2022-06-26T05:01:57.248Z",
+            "thumb": "https://picsum.photos/seed/picsum/500/300",
+            "desc": "Plunge into the world of graphics and LCD technologeis",
+            "tags": [ { "tag": "ESP32", "color": "#FF0000", "link": "" } ]
+        }
     ]
 }

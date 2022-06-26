@@ -13,6 +13,7 @@ export const Cube = () => {
 const CanvasWrapper = () => {
     return <Canvas>
         <ambientLight />
+        <pointLight />
         <CubeInner />
     </Canvas>
 }
@@ -22,7 +23,8 @@ const CubeInner = (props: JSX.IntrinsicElements['mesh']) => {
     
     useFrame((state, delta) => {
         if (!ref?.current) return;
-        ref.current.rotation.x += 0.01 }
+        ref.current.rotation.x += 0.01 
+        ref.current.rotation.y += 0.01 }
     );
 
     return (
@@ -30,6 +32,6 @@ const CubeInner = (props: JSX.IntrinsicElements['mesh']) => {
     {...props}
     ref={ref}>
         <boxGeometry args={[1,1,1]} />
-        <meshStandardMaterial color={"orange"} />
+        <meshStandardMaterial color={"orange"} opacity={1} />
     </mesh>)
 }
