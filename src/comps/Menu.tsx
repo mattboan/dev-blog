@@ -8,11 +8,14 @@ export interface Props {
 
 /**
  * Menu Component
+ * 
+ * TODO: Make the header z-index on top, then when the menu is open,
+ *      hide the bars button, slide the mattboan to the side
  */
 export const Menu = (props: Props) => {
     return <div className="menu-con">
         <div className="menu-header">
-        <h1>Menu</h1>
+        <h1>menu</h1>
 
          <button className="menu-btn" onClick={() => props.open()}>
             <FontAwesomeIcon icon={faTimes} />
