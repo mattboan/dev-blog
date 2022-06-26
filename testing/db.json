@@ -6,7 +6,15 @@
             "featured": "2022-06-26T05:01:57.248Z",
             "thumb": "https://picsum.photos/seed/picsum/500/300",
             "desc": "Plunge into the world of graphics and LCD technologeis",
-            "tags": [ { "tag": "ESP32", "color": "#FF0000", "link": "" } ]
+            "tags": [{ "tag": "ESP32", "color": "#FF0000", "link": "" }]
+        },
+        {
+            "id": "2",
+            "title": "React JWT Auth",
+            "featured": "2022-06-24T05:01:57.248Z",
+            "thumb": "https://picsum.photos/seed/picsum/500/300",
+            "desc": "How to implement JWT authentication using react!",
+            "tags": [{ "tag": "React", "color": "#FF0000", "link": "" }]
         }
     ]
 }

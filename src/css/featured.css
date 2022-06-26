@@ -1,4 +1,28 @@
 .coral-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.coral-indis {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.coral-indi {
+    background-color: #222;
+    height: 4px;
+    border-radius: 2px;
+    width: 100%;
+    transition: width 2s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.sel {
+    background-color: white;
 }
 
 .feat-post {

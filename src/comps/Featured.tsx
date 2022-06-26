@@ -1,12 +1,13 @@
 import axios from "axios";
-import {useEffect, useState} from "react";
-import "../css/featured.css"
-import {Post} from "../defs/posts";
-import {FeaturedPost} from "./FeaturedPost";
+import { useEffect, useState } from "react";
+import "../css/featured.css";
+import { Post } from "../defs/posts";
+import { useWindowSize } from "../hooks/WindowSize";
+import { FeaturedPost } from "./FeaturedPost";
 
 // Featured component
 export const Featured = () => {
-    const [ posts, setPosts] = useState<Post[]>([]);
+    const [posts, setPosts] = useState<Post[]>([]);
 
     // Get the featured posts
     const get = async () => {
@@ -16,7 +17,6 @@ export const Featured = () => {
             if (resp.status === 200) {
                 setPosts(resp.data);
             }
-
         } catch (err) {
             console.log("Failed to get the featured posts.");
         }
@@ -27,11 +27,15 @@ export const Featured = () => {
         get();
     }, []);
 
-    return <div className="feat-con">
-        <h2>Featured</h2>
+    return (
+        <div className="feat-con">
+            <h2>Featured</h2>
 
-        <div className="coral-wrapper">
-           {posts?.map((p: Post) => <FeaturedPost post={p} />)} 
+            <div className="coral-wrapper">
+                {posts?.map((p: Post) => (
+                    <FeaturedPost post={p} />
+                ))}
+            </div>
         </div>
-    </div>
+    );
 };
