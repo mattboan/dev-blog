@@ -21,6 +21,7 @@ function Scene({ ...props }) {
         <mesh
           name="BG"
           geometry={nodes.BG.geometry}
+          material={materials['BG Material']}
           castShadow
           receiveShadow
           position={[900.26, -32.01, -1687.89]}
@@ -29,7 +30,9 @@ function Scene({ ...props }) {
         <directionalLight
           name="Directional Light"
           castShadow
-          intensity={0.9}
+          intensity={0.6}
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
           shadow-camera-near={-10000}
           shadow-camera-far={100000}
           shadow-camera-left={-3610.2915}
@@ -54,7 +57,7 @@ function Scene({ ...props }) {
                   zoom={0.15}
                   far={100000}
                   near={-100000}
-                  position={[-3662.89, 2600.99, 3678.25]}
+                  position={[-3662.89, 2500.99, 3678.25]}
                   rotation={[-0.54, -0.71, -0.37]}         />
         <mesh
           name="Sphere"
