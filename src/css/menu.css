@@ -12,6 +12,10 @@
     backdrop-filter: blur(10px);
 }
 
+.menu-inner-con {
+    margin-top: 60px;
+}
+
 .menu-header {
     display: flex;
     justify-content: space-between;
