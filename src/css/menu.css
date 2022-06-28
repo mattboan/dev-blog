@@ -8,12 +8,13 @@
     height: 100vh;
     z-index: 10;
     padding: 15px;
-    background-color: rgba(21, 21, 21, 0.96);
+      background-color: rgb(26 26 26 / 93%);
+
     backdrop-filter: blur(10px);
 }
 
 .menu-inner-con {
-    margin-top: 60px;
+    padding-top: 60px;
 }
 
 .menu-header {

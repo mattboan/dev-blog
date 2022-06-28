@@ -1,0 +1,39 @@
+
+.footer-con {
+    margin: -15px;
+    margin-top: 35px;
+    background-color: #222;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 15px;
+}
+
+.footer-inner-con {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-row ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.footer-row ul li {
+    padding-bottom: 10px;
+}
+
+.footer-row a {
+    color: unset;
+    text-decoration: none;
+
+}
+
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom-text {
+    font-size: 10pt;
+}
