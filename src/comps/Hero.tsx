@@ -11,7 +11,7 @@ export const Hero = () => {
             <div className="hero-img-temp" style={{ backgroundImage: "url('/img/3d-env.png')" }}>
             </div>
             {/* <Cube /> */}
-            <SceneWrapper />
+           <SceneWrapper /> 
         </div>
     </div>
 };
