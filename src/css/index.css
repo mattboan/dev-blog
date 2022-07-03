@@ -11,6 +11,23 @@ h2 {
     font-weight: 800;
 }
 
+h3 {
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+}
+
+p {
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+
+}
+
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -43,3 +60,4 @@ input[type="reset"] {
     border-radius: 15px;
     overflow: hidden;
 }
+

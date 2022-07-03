@@ -1,13 +1,24 @@
+import {useEffect, useState} from "react";
+import "../css/small-post-item.css";
 import {Post} from "../defs/posts";
 import {ITag} from "../defs/tag";
 import {Tag} from "./Tag";
 
+const DEF_DESC_LIMIT = 45;
+
 export interface Props {
     post: Post;
+    desc_limit?: number;
 }
 
 /** Smaller version of the featured post */
 export const SmallPostItem = (props: Props) => {
+    const [desc_limit, setDescLimit] = useState(DEF_DESC_LIMIT);
+
+    useEffect(() => {
+        if (props.desc_limit) setDescLimit(props.desc_limit); 
+    }, [props.desc_limit]);
+        
 
     return <div className="small-post-item">
         <div className="small-post-item-img-con" style={{
@@ -16,10 +27,10 @@ export const SmallPostItem = (props: Props) => {
 
         <div className="small-post-item-right-con">
             <div className="small-post-item-right-con-text">
-                <h4>{props.post.title}</h4>
-                <p>{props.post.desc}</p>
+                <h3>{props.post.title}</h3>
+                <p>{props.post.desc.length > desc_limit  ? `${props.post.desc.substring(0, desc_limit)}...` : props.post.desc}</p>
             </div>
-            <div className="multi-tag-con">
+            <div className="small-post-multi-tag-con">
                 {props.post.tags?.map((t: ITag) => <Tag tag={t} />)}
             </div>
         </div>

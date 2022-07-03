@@ -2,8 +2,8 @@ import { Featured } from "../comps/Featured";
 import {Footer} from "../comps/Footer";
 import { Header } from "../comps/Header";
 import { Hero } from "../comps/Hero";
-import { Menu } from "../comps/Menu";
-import {SmallFeaturedList} from "../comps/SmallFeaturedList";
+import {SmallPostList} from "../comps/SmallPostList";
+import {Spacer} from "../comps/Spacer";
 
 // Home view
 export const Home = () => {
@@ -15,7 +15,9 @@ export const Home = () => {
 
             <Featured />
 
-            <SmallFeaturedList title="Trending" />
+            <SmallPostList title="Trending" />
+
+            <Spacer height={30} />
 
             <Footer />
         </>
