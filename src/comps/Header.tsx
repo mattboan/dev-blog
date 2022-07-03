@@ -4,12 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Menu } from "./Menu";
 import { motion } from "framer-motion";
+import {KEY_CODES, useEventListener} from "../hooks/EventListener";
 
 /**
  * Header component
  */
 export const Header = () => {
     const [open, setOpen] = useState(false);
+
+    /** Listen for the escpae key and menu key */
+    useEventListener("keydown", ({key}: {key: any}) => {
+        if (KEY_CODES.escape.includes(String(key)) && open) setOpen(false); 
+        if (KEY_CODES.m.includes(String(key))) setOpen(!open); 
+    });
 
     /** Watch the open variable */
     useEffect(() => {

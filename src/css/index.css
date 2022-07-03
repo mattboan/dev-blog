@@ -23,8 +23,16 @@ input[type="reset"] {
     outline: inherit;
 }
 
-.main-wrapper {
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 15px;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     height: 100vh;
