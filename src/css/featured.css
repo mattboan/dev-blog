@@ -1,6 +1,6 @@
 .coral-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;;
     gap: 35px;
 }
 
@@ -26,6 +26,7 @@
 }
 
 .feat-post {
+    max-width: 365px;
     background-color: #222;
     border-radius: 15px;
     padding: 25px;
@@ -33,7 +34,6 @@
     border: 2px solid #2c2c2c;
     transition: 0.35s;
     transition-timing-function: ease-in-out;
-
 }
 
 .feat-post:hover {
