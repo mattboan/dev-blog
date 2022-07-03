@@ -25,9 +25,13 @@ input[type="reset"] {
 
 .main-wrapper {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .major-con {
+    min-height: 300px;
     border-radius: 15px;
     overflow: hidden;
 }
