@@ -7,13 +7,18 @@
     height: 100vh;
     z-index: 10;
     padding: 15px;
-      background-color: rgb(26 26 26 / 93%);
-
+    background-color: rgb(26 26 26 / 93%);
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-inner-con {
+    padding: 10px;
     padding-top: 60px;
+    max-width: 1200px;
+    width: calc(100% - 20px);
 }
 
 .menu-header {
@@ -28,4 +33,10 @@
 
 .menu-header h1 {
     margin: 0px;
+}
+
+@media screen and (min-width: 1200px) {
+    .menu-inner-con a {
+        padding-left: 10px;
+    }
 }

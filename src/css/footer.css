@@ -1,7 +1,6 @@
-
 .footer-con {
     margin: -15px;
-    margin-top: 35px;
+    margin-top: 60px;
     background-color: #222;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -23,12 +22,6 @@
     padding-bottom: 10px;
 }
 
-.footer-row a {
-    color: unset;
-    text-decoration: none;
-
-}
-
 .footer-bottom {
     width: 100%;
     display: flex;
@@ -37,4 +30,10 @@
 
 .footer-bottom-text {
     font-size: 10pt;
+}
+
+@media screen and (min-width: 650px) {
+    .footer-con {
+        padding: 35px;
+    }
 }

@@ -7,17 +7,18 @@ export interface Props {
     open(): void;
 }
 
-
 /**
  * Menu Component
- * 
+ *
  * TODO: Make the header z-index on top, then when the menu is open,
  *      hide the bars button, slide the mattboan to the side
  */
 export const Menu = (props: Props) => {
-    return <div className="menu-con">
-        <div className="menu-inner-con">
-            <p>Home</p>
+    return (
+        <div className="menu-con">
+            <div className="menu-inner-con">
+                <a href="/home">Home</a>
+            </div>
         </div>
-    </div>
-}
+    );
+};

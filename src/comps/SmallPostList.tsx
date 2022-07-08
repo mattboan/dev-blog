@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Post } from "../defs/posts";
 import { DotLoader } from "react-spinners";
-import {SmallPostItem} from "./SmallPostItem";
+import { SmallPostItem } from "./SmallPostItem";
 
 export interface Props {
     title?: string;

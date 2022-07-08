@@ -12,20 +12,19 @@ h2 {
 }
 
 h3 {
-    font-family: 'Open Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 22px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 p {
-    font-family: 'Open Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
-
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 button,
@@ -38,6 +37,17 @@ input[type="reset"] {
     font: inherit;
     cursor: pointer;
     outline: inherit;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #ff6500;
+    text-decoration: underline;
 }
 
 #root {
@@ -56,8 +66,19 @@ input[type="reset"] {
 }
 
 .major-con {
-    min-height: 300px;
+    min-height: 550px;
     border-radius: 15px;
     overflow: hidden;
 }
 
+.hover-txt,
+.fa-btn > * {
+    color: white;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.hover-txt:hover,
+.fa-btn > *:hover {
+    color: #ff6500;
+}
