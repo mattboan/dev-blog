@@ -12,9 +12,17 @@
             "id": "2",
             "title": "React JWT Auth",
             "featured": "2022-06-24T05:01:57.248Z",
-            "thumb": "https://picsum.photos/seed/picsum/500/300",
+            "thumb": "https://picsum.photos/seed/dog/500/300",
             "desc": "How to implement JWT authentication using react!",
             "tags": [{ "tag": "React", "color": "#61dbfb", "link": "" }]
+        },
+        {
+            "id": "3",
+            "title": "React Three Fiber - React",
+            "featured": "2022-06-24T05:01:10:245Z",
+            "thumb": "https://picsum.photos/seed/test/500/300",
+            "desc": "Learn about 3D rendering using React and Three JS",
+            "tags": [{"tag": "React", "color": "#61dfb", "link": ""}]
         }
     ]
 }
