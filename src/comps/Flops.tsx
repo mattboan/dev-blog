@@ -74,8 +74,8 @@ export const FloppyDrive = (props: Props) => {
 
     // The position of the floppy drive
     const position = useMemo(() => {
-        // const z = Math.random() * -5;
-        const z = -300;
+        const z = Math.random() * -1000;
+        //const z = -300;
         const bounds = viewport.getCurrentViewport(camera, [0, 0, z]);
 
         console.log("Got the bounds", bounds);
@@ -122,7 +122,7 @@ export const FloppyDrive = (props: Props) => {
 // Export a group of floppy drives
 export const Flops = () => (
     <>
-        {Array.from({ length: 8 }, (_, i) => (
+        {Array.from({ length: 10 }, (_, i) => (
             <FloppyDrive key={i} />
         ))}
     </>
@@ -139,8 +139,8 @@ export const BG = () => {
 export function Rig({ v = new THREE.Vector3() }) {
     return useFrame((state) => {
         state.camera.position.lerp(
-            v.set(state.mouse.x + 2, state.mouse.y / 100, 1),
-            0.05
+            v.set(state.mouse.x / 1, state.mouse.y /1 , 1),
+            0.01
         );
     });
 }

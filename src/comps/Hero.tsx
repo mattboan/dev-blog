@@ -4,6 +4,8 @@ import "../css/hero.css";
 import { Cube } from "./Cube";
 import { SceneWrapper } from "./Scene";
 
+const avatar = "https://avatars.githubusercontent.com/u/29358494?v=4";
+
 /**
  * Hero component
  */
@@ -18,8 +20,19 @@ export const Hero = () => {
             ></div>
             {/* <Cube /> */}
             <SceneWrapper />
-            <div className="hero-text-box">
-                <h1>Code | Design | Create</h1>
+            <div className="hero-inner-wrapper-con">
+            <div className="hero-inner-con">
+                <div
+                    className="hero-avatar"
+                    style={{
+                        backgroundImage: `url("${avatar}")`,
+                    }}
+                />
+                <div className="hero-text-box">
+                    <h1 id="hero-big">@mattboan</h1>
+                    <h1>Code | Design | Create</h1>
+                </div>
+                </div>
                 {/* <h1>Code.</h1>
                 <h1>Design.</h1>
                 <h1>Create.</h1> */}

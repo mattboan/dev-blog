@@ -35,7 +35,7 @@ export const Header = () => {
             <div className="header">
                 <div className="header-left">
                     <button
-                        className="menu-btn fa-btn"
+                        className="menu-btn fa-btn hover-black"
                         onClick={() => !open && setOpen(!open)}
                         style={{
                             opacity: `${open ? "0%" : "100%"}`,
@@ -47,7 +47,7 @@ export const Header = () => {
                         animate={open ? "open" : "closed"}
                         variants={variants}
                     >
-                        <h1 className="hover-txt">mattboan</h1>
+                        <h1 className="menu-title hover-txt">mattboan</h1>
                     </motion.div>
                 </div>
 
