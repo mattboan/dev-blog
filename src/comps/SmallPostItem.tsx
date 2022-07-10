@@ -4,7 +4,7 @@ import { Post } from "../defs/posts";
 import { ITag } from "../defs/tag";
 import { Tag } from "./Tag";
 
-const DEF_DESC_LIMIT = 45;
+const DEF_DESC_LIMIT = 40;
 
 export interface Props {
     post: Post;

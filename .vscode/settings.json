@@ -1,3 +1,4 @@
 {
-    "editor.rename.enablePreview": true
+    "editor.rename.enablePreview": true,
+    "editor.formatOnSave": true
 }
