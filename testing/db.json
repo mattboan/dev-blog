@@ -22,7 +22,7 @@
             "featured": "2022-06-24T05:01:10:245Z",
             "thumb": "https://picsum.photos/seed/test/500/300",
             "desc": "Learn about 3D rendering using React and Three JS",
-            "tags": [{"tag": "React", "color": "#61dfb", "link": ""}]
+            "tags": [{ "tag": "React", "color": "#61dfb", "link": "" }]
         }
     ]
 }
