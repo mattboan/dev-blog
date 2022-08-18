@@ -1,3 +1,4 @@
+import "../css/editor.css"
 import { $getRoot, $getSelection } from "lexical";
 import { LexicalComposer } from "@lexical/react/LexicalComposer";
 import { PlainTextPlugin } from "@lexical/react/LexicalPlainTextPlugin";
@@ -18,6 +19,12 @@ export const Editor = (props: EditorProps) => {
         console.error(error);
         props?.onError && props.onError(error);
     };
+
+    // Handle the on change
+    const onChange = () => {
+        console.log("Editor state changed: ");
+    };
+
 
     return (
         <div className="editor-con">
