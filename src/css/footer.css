@@ -23,7 +23,7 @@
 }
 
 .footer-bottom {
-    width: 100%;
+    /*width: 100%;*/
     display: flex;
     justify-content: center;
 }
@@ -36,9 +36,5 @@
 @media screen and (min-width: 650px) {
     .footer-con {
         padding: 35px;
-        margin-right: -1000px;
-        margin-left: -1000px;
-        padding-right: 1000px;
-        padding-left:1000px;
     }
 }

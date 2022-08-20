@@ -14,8 +14,8 @@ export const Header = () => {
 
     /** Listen for the escpae key and menu key */
     useEventListener("keydown", ({ key }: { key: any }) => {
-        if (KEY_CODES.escape.includes(String(key)) && open) setOpen(false);
-        if (KEY_CODES.m.includes(String(key))) setOpen(!open);
+        if (KEY_CODES.escape.includes(String(key))) setOpen(!open);
+        //if (KEY_CODES.m.includes(String(key))) setOpen(!open);
     });
 
     /** Watch the open variable */

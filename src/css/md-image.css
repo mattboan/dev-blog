@@ -1,0 +1,25 @@
+.image-renderer-con {
+    width: 100%;
+}
+
+.image-renderer-image {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.image-renderer-open {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #222;
+    z-index: 1000;
+}
+
+.image-renderer-open-image {
+    width: 100%;
+    margin: 15px;
+}

@@ -5,5 +5,6 @@ export interface Post {
     desc: string;
     thumb: string;
     threeThumb: string;
+    content: string;
     tags: ITag[];
 }
