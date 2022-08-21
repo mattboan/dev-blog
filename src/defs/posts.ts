@@ -1,6 +1,7 @@
-import {ITag} from "./tag";
+import { ITag } from "./tag";
 
 export interface Post {
+    id: number;
     title: string;
     desc: string;
     thumb: string;

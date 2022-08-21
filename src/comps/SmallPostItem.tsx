@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/small-post-item.css";
 import { Post } from "../defs/posts";
 import { ITag } from "../defs/tag";
@@ -13,6 +14,7 @@ export interface Props {
 
 /** Smaller version of the featured post */
 export const SmallPostItem = (props: Props) => {
+    const navigate = useNavigate();
     const [desc_limit, setDescLimit] = useState(DEF_DESC_LIMIT);
 
     useEffect(() => {
@@ -20,7 +22,7 @@ export const SmallPostItem = (props: Props) => {
     }, [props.desc_limit]);
 
     return (
-        <div className="small-post-item">
+        <div className="small-post-item" onClick={() => navigate(`/post/${props.post.id}`)}>
             <div
                 className="small-post-item-img-con"
                 style={{

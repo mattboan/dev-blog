@@ -7,7 +7,7 @@ import { Footer } from "./comps/Footer";
 import { Header } from "./comps/Header";
 import { Spacer } from "./comps/Spacer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { PostView } from "./views/Post";
+import { ViewPost } from "./views/ViewPost";
 import { EditPost } from "./views/EditPost";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
@@ -18,7 +18,7 @@ root.render(
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/post" element={<PostView id={"1"} />} />
+                    <Route path="/post/:id" element={<ViewPost />} />
                     <Route path="/post/edit/:id" element={<EditPost />} />
                 </Routes>
             </BrowserRouter>

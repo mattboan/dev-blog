@@ -5,10 +5,10 @@ import { useParams } from "react-router-dom";
 import { getPost } from "../api/post";
 import { DotLoader } from "react-spinners";
 import { Post } from "../defs/posts";
-import { Button } from "../comps/Button"
+import { Button } from "../comps/Button";
 
 import ReactMarkdown from "react-markdown";
-import {ImageRenderer} from "../md-renderer/image-renderer";
+import { ImageRenderer } from "../md-renderer/image-renderer";
 
 /**
  * This component is for editing a post
@@ -44,7 +44,6 @@ export const EditPost = (props: any) => {
         setUpdateLoading(true);
 
         try {
-            
         } catch (err) {
             console.log("Failed to update");
         }
@@ -70,21 +69,18 @@ export const EditPost = (props: any) => {
     return (
         <div className="editor-wrapper">
             <div className="post-form">
-            <label>Title</label>
-            <input value={newTitle} onChange={(e: any) => setNewTitle(e.target.value)} />
+                <label>Title</label>
+                <input value={newTitle} onChange={(e: any) => setNewTitle(e.target.value)} />
 
-            <label>Content</label>
-            <textarea value={newContent} onChange={(e: any) => setNewContent(e.target.value)} />
-    
-            { updateLoading ? <p>Loading...</p> : <Button onClick={updatePost}>Update</Button>}
-</div>
+                <label>Content</label>
+                <textarea value={newContent} onChange={(e: any) => setNewContent(e.target.value)} />
 
-        <div className="markdown-con">
-           <ReactMarkdown components={{img: ImageRenderer}}>
-            {newContent}
-            </ReactMarkdown>
-        </div>
+                {updateLoading ? <p>Loading...</p> : <Button onClick={updatePost}>Update</Button>}
+            </div>
 
+            <div className="markdown-con">
+                <ReactMarkdown components={{ img: ImageRenderer }}>{newContent}</ReactMarkdown>
+            </div>
         </div>
     );
 };

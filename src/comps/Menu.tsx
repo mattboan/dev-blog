@@ -17,7 +17,7 @@ export const Menu = (props: Props) => {
     return (
         <div className="menu-con">
             <div className="menu-inner-con">
-                <a href="/home">Home</a>
+                <a href="/">Home</a>
             </div>
         </div>
     );

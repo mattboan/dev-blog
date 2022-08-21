@@ -12,7 +12,7 @@ export const Home = () => {
 
             <Featured />
 
-            <SmallPostList title="Trending" />  
+            <SmallPostList title="Trending" />
         </>
     );
 };

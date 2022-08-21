@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Menu } from "./Menu";
 import { motion } from "framer-motion";
 import { KEY_CODES, useEventListener } from "../hooks/EventListener";
+import { useNavigate } from "react-router-dom";
 
 /**
  * Header component
@@ -43,11 +44,10 @@ export const Header = () => {
                     >
                         <FontAwesomeIcon icon={faBars} />
                     </button>
-                    <motion.div
-                        animate={open ? "open" : "closed"}
-                        variants={variants}
-                    >
-                        <h1 className="menu-title hover-txt">mattboan</h1>
+                    <motion.div animate={open ? "open" : "closed"} variants={variants}>
+                        <a href="/" className="header-a">
+                            <h1 className="menu-title hover-txt">mattboan</h1>
+                        </a>
                     </motion.div>
                 </div>
 
