@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import { Post } from "../defs/posts";
-import { ITag } from "../defs/tag";
-import { Tag } from "./Tag";
+import { useNavigate } from 'react-router-dom';
+import { Post } from '../defs/posts';
+import { ITag } from '../defs/tag';
+import { Tag } from './Tag';
 
 export interface Props {
     post: Post;
@@ -14,8 +14,16 @@ export const FeaturedPost = (props: Props) => {
     const navigate = useNavigate();
 
     return (
-        <div className="feat-post" onClick={() => navigate(`/post/${props.post.id}`)}>
-            <div className="feat-post-img" style={{ backgroundImage: `url("${props.post.thumb}")` }} />
+        <div
+            className="feat-post"
+            onClick={() => navigate(`/post/${props.post.id}`)}
+        >
+            <div
+                className="feat-post-img"
+                style={{
+                    backgroundImage: `url("${props.post.featured_image}")`,
+                }}
+            />
 
             <div className="feat-post-bot">
                 <div className="feat-post-bot-right">

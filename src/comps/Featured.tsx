@@ -1,25 +1,28 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import "../css/featured.css";
-import { Post } from "../defs/posts";
-import { useWindowSize } from "../hooks/WindowSize";
-import { FeaturedPost } from "./FeaturedPost";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { getPosts } from '../api/post';
+import '../css/featured.css';
+import { Post } from '../defs/posts';
+import { useWindowSize } from '../hooks/WindowSize';
+import { FeaturedPost } from './FeaturedPost';
 
 // Featured component
 export const Featured = () => {
     const [posts, setPosts] = useState<Post[]>([]);
+    const [loading, setLoading] = useState(true);
 
     // Get the featured posts
     const get = async () => {
-        try {
-            const resp = await axios.get(`${process.env.REACT_APP_API}/posts`);
+        setLoading(true);
 
-            if (resp.status === 200) {
-                setPosts(resp.data);
-            }
+        try {
+            const posts = await getPosts();
+            setPosts(posts);
         } catch (err) {
-            console.log("Failed to get the featured posts.");
+            console.log('Failed to get the featured posts: ', err);
         }
+
+        setLoading(false);
     };
 
     // When this component mounts get the featured posts

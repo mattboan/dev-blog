@@ -1,4 +1,4 @@
-import "../css/footer.css";
+import '../css/footer.css';
 
 /**
  * Footer component
@@ -14,6 +14,9 @@ export const Footer = () => {
                             <a href="/">Home</a>
                         </li>
                         <li>
+                            <a href="/post/search">Posts</a>
+                        </li>
+                        <li>
                             <a href="/about">About</a>
                         </li>
                     </ul>
@@ -21,7 +24,7 @@ export const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <div className="footer-bottom-text">
-                    &copy; {new Date()?.getFullYear() || "2022"} | Matt Boan
+                    &copy; {new Date()?.getFullYear() || '2022'} | Matt Boan
                 </div>
             </div>
         </div>

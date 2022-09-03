@@ -1,6 +1,6 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Post } from "../defs/posts";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Post } from '../defs/posts';
 
 export interface Props {
     id: string;
@@ -18,11 +18,13 @@ export const PostView = (props: Props) => {
         setLoading(true);
 
         try {
-            const temp = await axios.get(`${process.env.REACT_APP_API}/posts/${props.id}`);
+            const temp = await axios.get(
+                `${process.env.REACT_APP_API}/posts/${props.id}`
+            );
 
             if (temp.status === 200) setPost(temp.data);
         } catch (err) {
-            console.log("Failed to get the post.");
+            console.log('Failed to get the post.');
         }
 
         setLoading(false);

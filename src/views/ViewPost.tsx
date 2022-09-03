@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import { useParams } from "react-router-dom";
-import { DotLoader } from "react-spinners";
-import { getPost } from "../api/post";
-import { Post } from "../defs/posts";
+import '../css/view-post.css';
+import '../css/rehype-atom-one-dark.css';
+import { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import { useParams } from 'react-router-dom';
+import { DotLoader } from 'react-spinners';
+import { getPost } from '../api/post';
+import { Post } from '../defs/posts';
+import { ImageRenderer } from '../md-renderer/image-renderer';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeFilter from 'react-markdown/lib/rehype-filter';
 
 export const ViewPost = () => {
     const { id } = useParams();
@@ -19,7 +24,7 @@ export const ViewPost = () => {
         try {
             setPost(await getPost(id));
         } catch (err) {
-            console.log("Failed to load ");
+            console.log('Failed to load ');
         }
 
         setLoading(false);
@@ -39,8 +44,27 @@ export const ViewPost = () => {
     else
         return (
             <div className="view-post-con">
-                <h2>{post?.title}</h2>
-                <ReactMarkdown>{post?.content}</ReactMarkdown>
+                <div
+                    className="feat-post-img"
+                    style={{
+                        backgroundImage: `url("${post?.featured_image}")`,
+                    }}
+                >
+                    <div className="view-post-outer-header">
+                        <div className="view-post-header">
+                            <h2>{post?.title}</h2>
+                            <div>{post?.desc}</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="view-post-content">
+                    <ReactMarkdown
+                        components={{ img: ImageRenderer }}
+                        rehypePlugins={[rehypeFilter, rehypeHighlight]}
+                    >
+                        {post?.content}
+                    </ReactMarkdown>
+                </div>
             </div>
         );
 };
